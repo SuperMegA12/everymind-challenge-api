@@ -13,6 +13,10 @@ public class LoadProduct {
   private final ProductRepository repository;
 
    public Product call(Long code) {
-    return repository.findByCode(code);
+    Product product = repository.findByCode(code);
+
+    if (product == null)  throw new RuntimeException("Product with code " + code + " not found");
+
+    return product;
   }
 }

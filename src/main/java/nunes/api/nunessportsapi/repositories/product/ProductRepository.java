@@ -8,4 +8,6 @@ import nunes.api.nunessportsapi.models.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long>{
 
+  Product findByCode(Long code);
+
 }

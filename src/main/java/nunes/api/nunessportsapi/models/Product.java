@@ -1,5 +1,6 @@
 package nunes.api.nunessportsapi.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +29,7 @@ public class Product {
   private String name;
 
   @NotNull
+  @Column(unique = true)
   private Long code;
 
   @NotNull

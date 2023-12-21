@@ -8,12 +8,14 @@ import nunes.api.nunessportsapi.models.Product;
 @NoArgsConstructor
 public class ProductResponseDTO {
 
+  private Long id;
   private String name;
   private Long code;
   private String description;
   private Double price;
 
   public ProductResponseDTO(Product product) {
+    this.id = product.getId();
     this.name = product.getName();
     this.code = product.getCode();
     this.description = product.getDescription();

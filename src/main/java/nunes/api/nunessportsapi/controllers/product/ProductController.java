@@ -45,7 +45,7 @@ public class ProductController {
     return new ResponseEntity<>(productResponseDTO, HttpStatus.CREATED);
   }
 
-  @PutMapping("update/{id}")
+  @PutMapping("/update/{id}")
   public ResponseEntity<ProductResponseDTO> update(@PathVariable Long id, @RequestBody ProductRequestDTO productRequestDTO) {
     Product product = update.call(id, productRequestDTO);
 
@@ -54,7 +54,7 @@ public class ProductController {
     return new ResponseEntity<>(productResponseDTO, HttpStatus.OK);
   }
 
-  @DeleteMapping("delete/{id}")
+  @DeleteMapping("/delete/{id}")
   public ResponseEntity<String> delete(@PathVariable Long id) {
     delete.call(id);
 

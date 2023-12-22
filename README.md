@@ -6,6 +6,11 @@ A API foi dividida em várias camadas para melhor organização e manutenção.
 
 ## Estrutura do Projeto
 
+### 0. Configurations
+
+- **Descrição:** 
+A pasta configuration e o arquivo de configuração CORS são responsáveis por configurar e habilitar o suporte ao Cross-Origin Resource Sharing (CORS) na aplicação Spring Boot. CORS é uma política de segurança do navegador que restringe como os recursos da web em uma página da web podem ser solicitados a partir de outro domínio, a fim de evitar solicitações não autorizadas
+
 ### 1. Controllers
 
 - **Descrição:** Contém as classes responsáveis por receber as requisições HTTP, direcionar para os serviços correspondentes e retornar as respostas apropriadas.

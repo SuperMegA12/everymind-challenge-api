@@ -10,7 +10,6 @@ import nunes.api.nunessportsapi.models.Product;
 import nunes.api.nunessportsapi.services.use_cases.product.CreateProduct;
 import nunes.api.nunessportsapi.services.use_cases.product.DeleteProduct;
 import nunes.api.nunessportsapi.services.use_cases.product.LoadAllProducts;
-import nunes.api.nunessportsapi.services.use_cases.product.LoadProduct;
 import nunes.api.nunessportsapi.services.use_cases.product.UpdateProduct;
 
 import java.util.List;
@@ -36,7 +35,6 @@ public class ProductController {
   private final UpdateProduct update;
   private final DeleteProduct delete;
   private final LoadAllProducts loadAll;
-  private final LoadProduct loadProduct;
 
   @PostMapping("/create")
   public ResponseEntity<ProductResponseDTO> create(@RequestBody ProductRequestDTO productRequestDTO) {
@@ -61,15 +59,6 @@ public class ProductController {
     delete.call(id);
 
     return ResponseEntity.status(HttpStatus.OK).body("Product with id " + id + " deleted");
-  }
-
-  @GetMapping("/list-product/{code}")
-  public ResponseEntity<ProductResponseDTO> listProduct(@PathVariable Long code) {
-    Product product = loadProduct.call(code);
-
-    ProductResponseDTO productResponseDTO = new ProductResponseDTO(product);
-
-    return new ResponseEntity<>(productResponseDTO, HttpStatus.OK);
   }
 
   @GetMapping("/list-all")

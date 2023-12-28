@@ -79,17 +79,7 @@ Serviço responsável por carregar todos os produtos existentes.
 - **Saída:**
   - `List<Product>`: Lista de todos os produtos.
 
-#### 4.1.3 LoadProduct
-
-Serviço responsável por carregar um produto com base no código.
-
-- **Entrada:**
-  - `Long code`: Código do produto a ser carregado.
-
-- **Saída:**
-  - `Product`: Produto correspondente ao código fornecido.
-
-#### 4.1.4 UpdateProduct
+#### 4.1.3 UpdateProduct
 
 Serviço responsável por atualizar um produto existente.
 
@@ -100,7 +90,7 @@ Serviço responsável por atualizar um produto existente.
 - **Saída:**
   - `Product`: Produto atualizado e salvo no banco de dados.
 
-#### 4.1.5 DeleteProduct
+#### 4.1.4 DeleteProduct
 
 Serviço responsável por excluir um produto existente.
 
